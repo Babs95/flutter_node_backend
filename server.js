@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import casesRoutes from "./routes/cases.js";
+import studentsRoutes from "./routes/students.js";
 import cors from "cors";
 //const casesRoutes = require("./routes/cases");
 
@@ -18,6 +19,7 @@ db.once("open", () => {
 app.use(express.json());
 app.use(cors());
 app.use("/cases", casesRoutes);
+app.use("/students", studentsRoutes);
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   res.setHeader("Access-Control-Allow-Headers", "*");
